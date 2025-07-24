@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import login,authenticate
+from django.contrib.auth import login,authenticate,logout
 
 def user_login(request):
     if request.user.is_authenticated == True:
@@ -13,3 +13,6 @@ def user_login(request):
             return redirect('/')
     return render(request,'account/login.html',{})
 
+def user_logout(request):
+    logout(request)
+    return redirect('/')

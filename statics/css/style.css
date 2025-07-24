@@ -5,9 +5,27 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
+    font-family:'yekan';
     overflow: hidden;
 }
+/* -------------------------------------------------------- */
+@font-face {
+  font-family: 'yekan';
+  src: url('../fonts/Yekan.eot');
+  src: url('../fonts/Yekan.eot?#iefix') format('FontName-opentype'),
+       url('../fonts/Yekan.woff') format('woff'),
+       url('../fonts/Yekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+font{
+  font-family: 'yekan'!important ;
+}
+
+/* ---------------------------------------------------------- */
+
+
 
 .wave{
 	position: fixed;
@@ -140,7 +158,7 @@ form{
 	padding: 0.5rem 0.7rem;
 	font-size: 1.2rem;
 	color: #555;
-	font-family: 'poppins', sans-serif;
+	font-family: 'yekan';
 }
 
 .input-div.pass{
@@ -171,7 +189,7 @@ a:hover{
 	background-size: 200%;
 	font-size: 1.2rem;
 	color: #fff;
-	font-family: 'Poppins', sans-serif;
+	font-family:'yekan';
 	text-transform: uppercase;
 	margin: 1rem 0;
 	cursor: pointer;
