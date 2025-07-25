@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
+    {% comment %} <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet"> {% endcomment %}
 
     <title>personal_website_resume</title>
 
@@ -18,7 +18,7 @@
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}"> {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/templatemo-stand-blog.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.css' %}">
 <!--
@@ -46,7 +46,7 @@ https://templatemo.com/tm-551-stand-blog
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>وبلاگ شخصی  <em>.</em></h2></a>
+          <a class="font navbar-brand" href="index.html"><h2>وبلاگ شخصی  <em>.</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" 
           aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -72,10 +72,16 @@ https://templatemo.com/tm-551-stand-blog
               </li>
               <li class="nav-item">
                 {% if request.user.is_authenticated %}
-                 <a class="nav-link" href="">{{request.user.first_name}}-{{request.user.last_name}}</a>
+                {% if request.user.first_name %}
+                <a class="nav-link" href="">{{request.user.first_name}}-{{request.user.last_name}}</a>
+                {% else %}
+                <a class="nav-link" href="">{{request.user.username}}</a>
+                {% endif %}
+                 
                  <a class="nav-link bg bg-warning" href="/logout">خروج از حساب کاربری</a>
                  {% else %}
                  <a class="nav-link" href="/login">ورود به حساب کاربری</a>
+                <li>  <a class="nav-link" href="/register">ثبت نام</a></li>
                 {% endif %}
                
               </li>

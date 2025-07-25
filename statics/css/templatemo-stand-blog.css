@@ -5,9 +5,22 @@ TemplateMo 551 Stand Blog
 https://templatemo.com/tm-551-stand-blog
 
 */
+@font-face {
+  font-family: 'yekan';
+  src: url('fonts/Yekan.eot');
+  src: url('../fonts/Yekan.eot?#iefix') format('FontName-opentype'),
+       url('../fonts/Yekan.woff') format('woff'),
+       url('../fonts/Yekan.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font{
+  font-family: 'yekan'!important ;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family:'yekan';
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -259,7 +272,7 @@ header .navbar {
 	color: #fff;
 	font-size: 18px;
 	line-height: 30px;
-	font-family: 'FontAwesome';
+	font-family: 'yekan';
 }
 
 

@@ -11,7 +11,7 @@ body{
 /* -------------------------------------------------------- */
 @font-face {
   font-family: 'yekan';
-  src: url('../fonts/Yekan.eot');
+  src: url('fonts/Yekan.eot');
   src: url('../fonts/Yekan.eot?#iefix') format('FontName-opentype'),
        url('../fonts/Yekan.woff') format('woff'),
        url('../fonts/Yekan.ttf') format('truetype');
@@ -19,7 +19,7 @@ body{
   font-style: normal;
 }
 
-font{
+.font{
   font-family: 'yekan'!important ;
 }
 
