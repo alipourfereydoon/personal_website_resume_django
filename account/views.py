@@ -39,3 +39,6 @@ def user_register(request):
 def user_logout(request):
     logout(request)
     return redirect('/')
+
+def profile(request):
+    return render(request,'account/profile.html')

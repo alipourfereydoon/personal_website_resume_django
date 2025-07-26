@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Online Shop Sidebar</title>
+<style>
+  /* Reset some default styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px; /* Width of the sidebar */
+    height: 100vh; /* Full viewport height */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    position: fixed; /* Fixed position for full height */
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Scroll if content exceeds height */
+  }
+
+  /* Sidebar header */
+  .sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  /* Navigation links styles */
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 15px;
+  }
+
+  .sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+
+  /* Hover effect for links */
+  .sidebar ul li a:hover {
+    background-color: #575757;
+  }
+
+  /* Main content styles */
+  .content {
+    margin-left: 250px; /* Same as sidebar width */
+    padding: 20px;
+    flex: 1;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px;
+    }
+    .content {
+      margin-left: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      flex-direction: column;
+    }
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    .content {
+      margin-left: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h2>Shop Categories</h2>
+  <ul>
+    <li><a href="{% url "home:home" %}">Home</a></li>
+    <li><a href="#">Electronics</a></li>
+    <li><a href="#">Fashion</a></li>
+    <li><a href="#">Home & Garden</a></li>
+    <li><a href="#">Sports</a></li>
+    <li><a href="#">Beauty</a></li>
+    <li><a href="#">Toys</a></li>
+    <li><a href="#">Contact Us</a></li>
+  </ul>
+</div>
+
+<!-- Main content -->
+<div class="content">
+  <h1> به پروفایل {{user.profile.user.last_name}} خوش آمدید</h1>
+  <p>
+    کد ملی کاربر:
+    {{user.profile.nationalcode}}
+  </p>
+  <!-- Add your main shop content here -->
+</div>
+
+</body>
+</html>
