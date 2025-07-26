@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .main-button a {
 	display: inline-block;
-	background-color: #5ef440;
+	background-color: #061812;
 	color: #fff;
 	font-size: 13px;
 	font-weight: 500;
@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .main-button a:hover {
-	background-color: #5ef440;
+	background-color: #061812;
 }
 
 .heading-page {
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .page-heading .text-content h4 {
-	color: #5ef440;
+	color: #061812;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -85,7 +85,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .page-heading .text-content h2 {
-	color: #A6AEBF;
+	color: #061812;
 	font-size: 36px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -207,7 +207,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show>.nav-link {
-	color: #5ef440!important;
+	color: #061812!important;
 }
 .navbar .navbar-brand {
 	float: 	left;
@@ -215,7 +215,7 @@ header .navbar {
 	outline: none;
 }
 .navbar .navbar-brand h2 {
-	color: #5ef440;
+	color: #061812;
 	text-transform: uppercase;
 	font-size: 24px;
 	font-weight: 900;
@@ -259,7 +259,7 @@ header .navbar {
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
-	background-color: #5ef440;	
+	background-color: #061812;	
 	height: 46px;
 	outline: none;
 	border-radius: 0px;
@@ -297,7 +297,7 @@ header .navbar {
 }
 
 .owl-banner .item .item-content .meta-category span {
-	color: #5ef440;
+	color: #061812;
 	font-size: 18px;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -386,7 +386,7 @@ header .navbar {
 }
 
 .call-to-action .main-content span {
-	color: #5ef440;
+	color: #061812;
 	font-size: 18px;
 	font-weight: 900;
 	letter-spacing: 0.5px;
@@ -435,7 +435,7 @@ header .navbar {
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
 	font-weight: 900;
-	color: #5ef440;
+	color: #061812;
 }
 
 .blog-posts .down-content h4 {
@@ -443,7 +443,7 @@ header .navbar {
 	text-transform: capitalize;
 	letter-spacing: 0.5px;
 	font-weight: 900;
-	color: #5ef440;
+	color: #061812;
 	margin: 10px 0px 12px 0px;
 }
 
@@ -523,7 +523,7 @@ header .navbar {
 
 .blog-posts .down-content ul.post-tags li a:hover,
 .blog-posts .down-content ul.post-share li a:hover {
-	color: #5ef440;
+	color: #061812;
 }
 
 .blog-posts .main-button a {
@@ -557,13 +557,13 @@ ul.page-numbers li a {
 }
 
 ul.page-numbers li.active a {
-	background-color: #5ef440;
-	border-color: #5ef440;
+	background-color: #061812;
+	border-color: #061812;
 	color: #fff;
 }
 
 ul.page-numbers li a:hover {
-	color: #5ef440;
+	color: #061812;
 }
 
 .blog-posts .sidebar-heading h2 {
@@ -571,7 +571,7 @@ ul.page-numbers li a:hover {
 	text-transform: uppercase;
 	font-weight: 900;
 	letter-spacing: 0.5px;
-	color: #5ef440;
+	color: #061812;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 15px;
 	margin-bottom: 25px;
@@ -613,7 +613,7 @@ ul.page-numbers li a:hover {
 }
 
 .blog-posts .comments ul li .right-content h4 {
-	color: #5ef440;
+	color: #061812;
 	font-size: 19px;
 	font-weight: 900;
 	letter-spacing: 0.5px;
@@ -638,7 +638,7 @@ ul.page-numbers li a:hover {
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #5ef440;
+	color: #061812;
 	outline: none;
 	padding: 0px 15px;
 	margin-bottom: 30px;
@@ -651,7 +651,7 @@ ul.page-numbers li a:hover {
 	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #5ef440;
+	color: #061812;
 	outline: none;
 	padding: 10px 15px;
 	margin-bottom: 30px;
@@ -668,7 +668,7 @@ ul.page-numbers li a:hover {
 
 .blog-posts .submit-comment button {
 	display: inline-block;
-	background-color: #5ef440;
+	background-color: #061812;
 	color: #fff;
 	font-size: 13px;
 	font-weight: 500;
@@ -680,7 +680,7 @@ ul.page-numbers li a:hover {
 }
 
 .blog-posts .submit-comment button:hover {
-	background-color: #5ef440;
+	background-color: #061812;
 }
 
 /* Sidebar */
@@ -702,7 +702,7 @@ ul.page-numbers li a:hover {
 	text-transform: uppercase;
 	font-weight: 900;
 	letter-spacing: 0.5px;
-	color: #5ef440;
+	color: #061812;
 	border-bottom: 1px solid #eee;
 	padding-bottom: 15px;
 	margin-bottom: 25px;
@@ -739,13 +739,13 @@ ul.page-numbers li a:hover {
 .sidebar .recent-posts ul li h5 {
 	font-size: 19px;
 	font-weight: 900;
-	color: #5ef440;
+	color: #061812;
 	line-height: 30px;
 	transition: all 0.3s;
 }
 
 .sidebar .recent-posts ul li h5:hover {
-	color: #5ef440;
+	color: #061812;
 }
 
 .sidebar .recent-posts ul li span {
@@ -771,7 +771,7 @@ ul.page-numbers li a:hover {
 }
 
 .sidebar .categories ul li a:hover {
-	color: #5ef440;
+	color: #061812;
 }
 
 .sidebar .tags ul li {
@@ -1061,7 +1061,7 @@ footer p a:hover {
 	}
 	.navbar .navbar-nav a.nav-link {
 		padding: 15px 0px;
-		color: #5ef440!important;
+		color: #061812!important;
 	}
 	.navbar .navbar-nav .nav-link:hover,
 	.navbar .navbar-nav .active>.nav-link,

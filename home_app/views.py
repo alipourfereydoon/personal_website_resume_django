@@ -3,4 +3,8 @@ from blog_app.models import Article
 
 def home(request):
     article = Article.objects.all()
-    return render(request,'home_app/index.html',context={'articles':article})
+    recent_article = Article.objects.all().order_by('-created')[:4]
+    return render(request,'home_app/index.html', {
+        'articles':article , 
+        'recent_articles':recent_article,
+        })
