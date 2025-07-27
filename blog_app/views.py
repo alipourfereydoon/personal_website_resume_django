@@ -8,3 +8,6 @@ def article_detail(request,pk):
 
 
 
+def allpost(request):
+    articles = Article.objects.all()
+    return render(request,'blog_app/article_list.html',{'articles':articles})
