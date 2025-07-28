@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'blog_app.apps.BlogAppConfig',
     'django_cleanup.apps.CleanupConfig',
+    'django_render_partial',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'context_processors.context_processors.recent_articels'
+                'context_processors.context_processors.recent_articels',
             ],
         },
     },

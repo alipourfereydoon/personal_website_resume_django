@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-from . models import Article
+from . models import Article,Category
 
 
 def article_detail(request,pk):

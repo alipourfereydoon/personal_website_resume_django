@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load render_partial %}
 {% block main %}
     <!-- Page Content -->
     <!-- Banner Starts Here -->
@@ -116,7 +117,7 @@
             </div>
           </div>
           <div class="col-lg-4">
-{% include "includes/sidebar.html" %}
+                              {% render_partial "home:sidebar_partial" %}
           </div>
         </div>
       </div>
