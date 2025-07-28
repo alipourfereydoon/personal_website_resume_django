@@ -10,7 +10,8 @@
 
           {% for article in articles %}
             <div class="item">
-            <a href="{% url "blog:article_detail" article.id %}"><img src="{{article.image.url}}" alt="{{article.title}}"></a>
+            <a href="{% url "blog:article_detail" article.id %}"><img src="{{article.image.url}}" 
+              alt="{{article.title}}"></a>
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
@@ -46,7 +47,8 @@
                 </div>
                 <div class="col-lg-4">
                   <div class="main-button">
-                    <a rel="nofollow" href="https://templatemo.com/tm-551-stand-blog" target="_parent">Download Now!</a>
+                    <a rel="nofollow" href="https://templatemo.com/tm-551-stand-blog"
+                     target="_parent">Download Now!</a>
                   </div>
                 </div>
               </div>

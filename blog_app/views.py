@@ -17,3 +17,8 @@ def allpost(request):
                    })
 
 
+def category_detail(request,pk=None):
+    category = get_object_or_404(Category,id=pk)
+    articles = category.articles.all()
+    return render(request,'blog_app/article_list.html',{'articles':articles})
+
