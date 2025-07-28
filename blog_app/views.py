@@ -10,4 +10,10 @@ def article_detail(request,pk):
 
 def allpost(request):
     articles = Article.objects.all()
-    return render(request,'blog_app/article_list.html',{'articles':articles})
+    recents = Article.objects.order_by('-created')[:3]
+    return render(request,'blog_app/article_list.html',
+                  {'articles':articles,
+                   'recent_post':recents
+                   })
+
+
