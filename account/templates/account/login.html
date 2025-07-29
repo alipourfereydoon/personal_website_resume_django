@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<title>register Form</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	{% comment %} <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet"> {% endcomment %}
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -37,11 +37,12 @@
            		    	<input type="password" name="password" class="input">
             	   </div>
             	</div>
-            	{% comment %} <a href="#">Forgot Password?</a> {% endcomment %}
+  
             	<input type="submit" class="btn" value="Login">
             </form>
         </div>
     </div>
+
     <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

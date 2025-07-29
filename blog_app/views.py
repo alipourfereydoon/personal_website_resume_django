@@ -1,11 +1,12 @@
 from django.shortcuts import render,get_object_or_404
-from . models import Article,Category
+from . models import Article,Category,Comment
 from django.core.paginator import Paginator
 
 
 def article_detail(request,pk):
     articles = get_object_or_404(Article,id = pk)
-    return render(request,'blog_app/article_detail.html',context={'article':articles})
+    comments = get_object_or_404(Comment,id = pk)
+    return render(request,'blog_app/article_detail.html',context={'article':articles , 'comment':comments})
 
 
 
