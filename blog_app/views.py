@@ -34,3 +34,10 @@ def category_detail(request,pk=None):
     articles = category.articles.all()
     return render(request,'blog_app/article_list.html',{'articles':articles})
 
+def search(request):
+    q = request.GET.get('q')
+    article = Article.objects.filter(title__icontains = q)
+    paginator = Paginator(article,1)
+    page_number = request.GET.get('page')
+    object_list = paginator.get_page(page_number)
+    return render(request,'blog_app/article_list.html',{'articles':object_list})
