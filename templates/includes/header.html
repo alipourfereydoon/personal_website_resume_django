@@ -24,7 +24,7 @@
                 <a class="nav-link" href="post-details.html">جزئیات پست ها</a>
               </li>
               <li class="nav-item">
-                <a class="font !important nav-link" href="contact.html">تماس با ما</a>
+                <a class="font !important nav-link" href="{% url "blog:contact_us" %}">تماس با ما</a>
               </li>
               <li class="nav-item {% if request.resolver_match.url_name == 'profile' %}active{% endif %} ">
                 {% if request.user.is_authenticated %}
