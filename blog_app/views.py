@@ -5,6 +5,13 @@ from django.core.paginator import Paginator
 
 def article_detail(request,pk):
     articles = get_object_or_404(Article,id = pk)
+    if request.method == 'POST':
+        parent_id = request.POST.get('parent_id')
+        body = request.POST.get('body')
+        Comment.objects.create(article = articles , user = request.user , body = body , parent_id= parent_id)
+        
+
+    
     comments = get_object_or_404(Comment,id = pk)
     return render(request,'blog_app/article_detail.html',context={'article':articles , 'comment':comments})
 
