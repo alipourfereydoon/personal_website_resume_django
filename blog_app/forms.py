@@ -2,6 +2,8 @@ from django import forms
 from django.core.validators import ValidationError
 
 class ContactusForm(forms.Form):
+    BIRTH_YEAR_CHOICES = ['1980','1981','1982']
+    birth_year = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES , attrs={'class':'form-control'}))
     name = forms.CharField(max_length=8,label='your name')
     text = forms.CharField(max_length=8 , label='your message')
 
