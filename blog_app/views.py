@@ -46,10 +46,11 @@ def contactus(request):
     if request.method == 'POST':
         form = MessageForm(data=request.POST)
         if form.is_valid():
-            title = form.cleaned_data['title']
-            text = form.cleaned_data['text']
-            email = form.cleaned_data['email']
-            Message.objects.create(title = title , text = text , email = email)
+            # title = form.cleaned_data['title']
+            # text = form.cleaned_data['text']
+            # email = form.cleaned_data['email']
+            # Message.objects.create(title = title , text = text , email = email)
+            form.save()
             return redirect('home:home')
     else:    
         form = MessageForm()

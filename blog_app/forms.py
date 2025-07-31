@@ -35,4 +35,15 @@ class ContactusForm(forms.Form):
 class MessageForm(forms.ModelForm):
     class Meta :
         model = Message
-        fields = ('title','text','email')
+        fields = ('__all__')
+        widgets ={
+            'title':forms.TextInput(attrs={
+                'class':'form-control',
+                'placeholder':'please enter title',
+                'style':'width:600px'
+            }),
+            'text':forms.TextInput(attrs={
+                'class':'form-contrl',
+                'placeholder':'please enter your message'
+            }),
+        }
