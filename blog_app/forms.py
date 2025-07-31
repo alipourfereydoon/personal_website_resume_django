@@ -1,5 +1,6 @@
 from django import forms
 from django.core.validators import ValidationError
+from . models import Message
 
 class ContactusForm(forms.Form):
     BIRTH_YEAR_CHOICES = ['1980','1981','1982']
@@ -20,6 +21,18 @@ class ContactusForm(forms.Form):
     #     if 'a' in name:
     #         raise ValidationError('a can not use at this field', code='a_in_name')  
     #     return name  
-        
 
 
+# the first aprouch to create a form 
+#         
+# class MessageForm(forms.Form):
+#     title = forms.CharField(max_length=100)
+#     text = forms.CharField(widget=forms.Textarea())
+#     email = forms.EmailField()
+
+# the second approuch to create a form 
+
+class MessageForm(forms.ModelForm):
+    class Meta :
+        model = Message
+        fields = ('title','text','email')

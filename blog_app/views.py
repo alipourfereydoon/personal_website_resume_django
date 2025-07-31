@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_object_or_404,redirect
-from . models import Article,Category,Comment
+from . models import Article,Category,Comment,Message
 from django.core.paginator import Paginator
-from . forms import ContactusForm
+from . forms import ContactusForm,MessageForm
 
 def article_detail(request,pk):
     articles = get_object_or_404(Article,id = pk)
@@ -44,10 +44,16 @@ def search(request):
 
 def contactus(request):
     if request.method == 'POST':
-        form = ContactusForm(data=request.POST)
+        form = MessageForm(data=request.POST)
         if form.is_valid():
-            print(form.cleaned_data['text'])
+            title = form.cleaned_data['title']
+            text = form.cleaned_data['text']
+            email = form.cleaned_data['email']
+            Message.objects.create(title = title , text = text , email = email)
             return redirect('home:home')
     else:    
-        form = ContactusForm()
+        form = MessageForm()
     return render(request,'blog_app/contact_us.html',{'form':form})
+
+
+
