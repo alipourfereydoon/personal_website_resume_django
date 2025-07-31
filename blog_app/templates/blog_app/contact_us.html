@@ -19,17 +19,25 @@
 
 
                     <div class="content">
-                      <form id="contact" action="" method="post">
+                      <form  action="" method="post">
                         {% csrf_token %}
+
+                        
                         <div class="row">
-                          <div class="col-md-6 col-sm-12">
-                              {{form}}
-                          <div class="col-lg-12">
-                            <fieldset>
-                              <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                            </fieldset>
-                          </div>
-                        </div>
+                              <div class="col-md-6 col-sm-12">
+                                {% if form.name.errors %}
+                                <div class="alert alert-danger">{{form.name.errors}}</div>
+                                {% endif %}
+                                  {{form.name.label}}
+                                  {{form.name}}
+                                  {{form.text.label}}
+                                  {{form.text}}
+                              <div class="col-lg-12">
+                        
+                                  <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                              
+                              </div>
+                            </div>
                       </form>
 
 
