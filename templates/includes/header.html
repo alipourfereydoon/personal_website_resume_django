@@ -10,6 +10,11 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item  {% if request.resolver_match.url_name == 'home' %}active{% endif %} ">
+                <a class="nav-link" href="{% url "account:edit" %}"> ویرایش اطلاعات کاربری
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item  {% if request.resolver_match.url_name == 'home' %}active{% endif %} ">
                 <a class="nav-link" href="{% url "home:home" %}">صفحه اصلی
                   <span class="sr-only">(current)</span>
                 </a>

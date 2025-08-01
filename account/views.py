@@ -46,11 +46,14 @@ def profile(request):
     return render(request,'account/profile.html')
 
 def edituser(request):
-    user = request.user
-    form = UserEditForm(instance=user)
-    if request.method == "POST":
-        form = UserEditForm(instance=user , data=request.POST)
-        if form.is_valid():
-            form.save()
+    if request.user.is_authenticated == True:
+        user = request.user
+        form = UserEditForm(instance=user)
+        if request.method == "POST":
+            form = UserEditForm(instance=user , data=request.POST)
+            if form.is_valid():
+                form.save()
+    else:
+        return redirect('account:login')            
     return render(request,'account/edit.html',{'form':form})
         

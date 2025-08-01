@@ -2,6 +2,7 @@ from django.shortcuts import render,get_object_or_404,redirect
 from . models import Article,Category,Comment,Message
 from django.core.paginator import Paginator
 from . forms import ContactusForm,MessageForm
+from django.views.generic import View,DetailView,ListView
 
 def article_detail(request,pk):
     articles = get_object_or_404(Article,id = pk)
@@ -17,16 +18,34 @@ def article_detail(request,pk):
 
 
 
-def allpost(request):
-    articles = Article.objects.all()
-    paginator = Paginator(articles,1)
-    page_number = request.GET.get('page')
-    object_list = paginator.get_page(page_number)
-    recents = Article.objects.order_by('-created')[:3]
-    return render(request,'blog_app/article_list.html',
-                  {'articles':object_list,
-                   'recent_post':recents
-                   })
+# def allpost(request):
+#     articles = Article.objects.all()
+#     paginator = Paginator(articles,1)
+#     page_number = request.GET.get('page')
+#     object_list = paginator.get_page(page_number)
+#     recents = Article.objects.order_by('-created')[:3]
+#     return render(request,'blog_app/article_list.html',
+#                   {'articles':object_list,
+#                    'recent_post':recents
+#                    })
+
+class ArticleListView(ListView):
+    model = Article
+    context_object_name = "articles"
+    paginate_by = 1
+
+
+# class ListView(View):
+#     quertset = None
+#     template_name = None
+
+#     def get(self,request):
+#         return render(request,self.template_name , {'articles':self.quertset})
+
+# class ArticleList(ListView):
+#     quertset = Article.objects.all()
+#     template_name = 'blog_app/article_list.html'
+
 
 
 def category_detail(request,pk=None):
