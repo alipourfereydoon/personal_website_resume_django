@@ -19,13 +19,15 @@
 				{% csrf_token %}
 				<img src="{% static 'images/avatar.svg' %}">
 				<h2 class="title">Welcome</h2>
+				<p>{{form.errors}}</p>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
            		   </div>
            		   <div class="div">
-           		   		<h5>Username</h5>
-           		   		<input type="text" name="username" class="input">
+				     	{{form.username.label}}
+           		   		{{form.username}}
+           		   		
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -33,8 +35,9 @@
            		    	<i class="fas fa-lock"></i>
            		   </div>
            		   <div class="div">
-           		    	<h5>Password</h5>
-           		    	<input type="password" name="password" class="input">
+					{{form.password.label}}
+           		    	{{form.password}}
+           		    	
             	   </div>
             	</div>
   
