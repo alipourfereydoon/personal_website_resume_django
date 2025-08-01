@@ -2,6 +2,7 @@ from django import forms
 from . models import Login
 from django.contrib.auth import authenticate
 from django.forms import ValidationError
+from django.contrib.auth.models import User
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=15)
@@ -14,3 +15,7 @@ class LoginForm(forms.Form):
         raise ValidationError('information is not corresct' , code='invalid_info')
     
     
+class UserEditForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ('username','first_name' , 'last_name','email')
